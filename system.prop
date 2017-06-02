@@ -11,6 +11,12 @@ persist.camera.hal.debug.mask=0
 # Display
 ro.sf.lcd_density=320
 
+# Factory Reset Protection
+ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
+
+# Fusion mag field filter
+ro.fusion.magfield.max=250
+
 # Radio
 persist.data.target=dpm1
 persist.radio.multisim.config=dsds
