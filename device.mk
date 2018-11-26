@@ -134,6 +134,8 @@ $(call inherit-product, device/yu/lettuce/system_prop.mk)
 PRODUCT_PACKAGES += \
     ims-ext-common \
     ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
