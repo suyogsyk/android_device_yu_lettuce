@@ -118,6 +118,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshims_boringssl \
+    libshims_camera \
+    libshims_ims
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.lettuce

@@ -74,5 +74,11 @@ endif
 # Widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+    /system/vendor/lib64/lib-imscamera.so|libshims_camera.so \
+    /system/vendor/lib64/lib-imsvt.so|libshims_ims.so \
+
 # Inherit from proprietary files
 include vendor/yu/lettuce/BoardConfigVendor.mk
