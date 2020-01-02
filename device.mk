@@ -27,7 +27,6 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Audio
 PRODUCT_COPY_FILES += \
-<<<<<<< HEAD
     $(LOCAL_PATH)/audio/acdb/Bluetooth_cal.acdb:system/etc/acdbdata/QRD/Bluetooth_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/General_cal.acdb:system/etc/acdbdata/QRD/General_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/Global_cal.acdb:system/etc/acdbdata/QRD/Global_cal.acdb \
