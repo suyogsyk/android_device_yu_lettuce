@@ -132,14 +132,12 @@ $(call inherit-product, device/yu/lettuce/system_prop.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
-    ims-ext-common_system \
+    ims-ext-common \
     ims_ext_common.xml \
-    qti-telephony-hidl-wrapper \
-    qti_telephony_hidl_wrapper.xml \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
-    ims-ext-common_system \
+    ims-ext-common \
     telephony-ext
 
 PRODUCT_COPY_FILES += \
@@ -166,5 +164,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
-# Call the proprietary setup
+# IMS properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.lte.volte_call_capable=true \
+    persist.ims.enableADBLogs=1 \
+    persist.ims.enableDebugLogs=1 \
+    persist.radio.calls.on.ims=true \
+    persist.radio.csvt.enabled=false \
+    persist.radio.jbims=1 \
+    persist.radio.ROTATION_ENABLE=1 \
+    persist.radio.VT_ENABLE=1 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.radio.VT_USE_MDM_TIME=0 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.volte_enabled_by_hw=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    DEVICE_PROVISIONED=1 \
+    ril.subscription.types=NV,RUIM
+
+#Call the proprietary setup
 $(call inherit-product, vendor/yu/lettuce/lettuce-vendor.mk)
