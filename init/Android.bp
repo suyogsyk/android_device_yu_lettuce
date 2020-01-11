@@ -18,14 +18,11 @@ cc_library_static {
     name: "libinit_lettuce",
     recovery_available: true,
     srcs: ["init_lettuce.cpp"],
+    static_libs: ["libbase"],
+    cpp_std: "c++17",
+
     include_dirs: [
         "system/core/base/include",
-        "system/core/init",
-        "external/selinux/libselinux/include",
-    ],
-    static_libs: [
-        "libbase",
-        "libselinux",
-    ],
-    cflags: ["-Wall"]
+        "system/core/init"
+    ]
 }
